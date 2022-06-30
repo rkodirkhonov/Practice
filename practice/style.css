@@ -46,8 +46,24 @@ nav ul {
     align-items: center;
     gap: 2rem;
 }
-nav ul:first-child {
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+nav a:hover {
+    color: var(--magenta);
+}
+nav li:first-child {
     flex-basis: 100%;
+    text-align: center;
+}
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+nav [class*="fa-"]:hover {
+    color: var(--magenta);
 }
 
 h1, h2, h3 {
@@ -90,4 +106,16 @@ a:hover {
 }
 #contact p:last-child {
     margin-top: 3rem;
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
 }
